@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "max-len": ["error", 100],
+    "prefer-const": "error",
+    "no-var": "error"
+  },
+  "env": {
+    "mocha": true
+  }
+}
