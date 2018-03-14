@@ -10,6 +10,7 @@
     "no-var": "error"
   },
   "env": {
-    "mocha": true
+    "mocha": true,
+    "jest": true
   }
 }
