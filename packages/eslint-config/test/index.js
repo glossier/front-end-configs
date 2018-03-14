@@ -6,6 +6,7 @@ const cli = new CLIEngine({
   useEslintrc: false,
   baseConfig: eslintrc,
   rules: {
+    'react/react-in-jsx-scope': 0,
     'no-unused-vars': 0,
     'eol-last': 0
   }
@@ -32,4 +33,10 @@ test('disallow var', t => {
   const result = lint("var foo = 'bar'")
   t.is(result.errorCount, 1)
   t.is(result.messages[0].ruleId, 'no-var')
+})
+
+test('jsx expect single quotes', t => {
+  const result = lint('const foo = () => <div id="bar" />')
+  t.is(result.errorCount, 1)
+  t.is(result.messages[0].ruleId, 'jsx-quotes')
 })
