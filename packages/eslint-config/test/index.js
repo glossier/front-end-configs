@@ -18,7 +18,7 @@ const lint = text => {
 }
 
 test('disallow line longer than 100 characters', t => {
-  const result = lint("const books = ['JavaScript: The Good Parts', 'ES6 & Beyond', 'Eloquent JavaScript A Modrn Introduction to Programming']")
+  const result = lint("const books = ['JavaScript: The Good Parts', 'ES6 & Beyond', 'Eloquent JavaScript A Modern Introduction to Programming']")
   t.is(result.errorCount, 1)
   t.is(result.messages[0].ruleId, 'max-len')
 })
@@ -39,4 +39,10 @@ test('jsx expect single quotes', t => {
   const result = lint('const foo = () => <div id="bar" />')
   t.is(result.errorCount, 1)
   t.is(result.messages[0].ruleId, 'jsx-quotes')
+})
+
+test('focused test are not allowed', t => {
+  const result = lint('test.only(() => { /**/ })')
+  t.is(result.errorCount, 1)
+  t.is(result.messages[0].ruleId, 'jest/no-focused-tests')
 })
