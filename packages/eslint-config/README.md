@@ -1,5 +1,5 @@
 # Glossier's JavaScript styleguide
-We are following [JavaScript Standard Style](https://standardjs.com), with [some additional guidelines](#additional-guidelines).
+We are following [JavaScript Standard Style](https://standardjs.com), with [some additional guidelines](#additional-guidelines). We are also extending the [react](https://github.com/yannickcr/eslint-plugin-react) and [jest](https://github.com/jest-community/eslint-plugin-jest) ESLint plugins with the recommended configuration.
 
 ## Installation
 ```

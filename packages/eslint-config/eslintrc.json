@@ -3,7 +3,8 @@
   "extends": [
     "standard",
     "standard-jsx",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:jest/recommended"
   ],
   "rules": {
     "max-len": ["error", 100],
