@@ -3,7 +3,7 @@ We are following [JavaScript Standard Style](https://standardjs.com), with [some
 
 ## Installation
 ```
-yarn add --dev eslint@^3.19.0 @glossier/eslint-config
+yarn add --dev eslint@^4.19.1 @glossier/eslint-config
 ```
 
 ## Usage
