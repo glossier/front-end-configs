@@ -4,7 +4,8 @@
     "standard",
     "standard-jsx",
     "plugin:react/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "rules": {
     "max-len": ["error", 100],
