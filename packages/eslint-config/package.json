@@ -1,6 +1,6 @@
 {
   "name": "@glossier/eslint-config",
-  "version": "2.1.1",
+  "version": "2.1.3",
   "description": "How we write JavaScript at Glossier",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,9 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "eslint": "^4.19.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }

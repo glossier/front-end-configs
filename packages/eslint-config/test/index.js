@@ -18,7 +18,9 @@ const lint = text => {
 }
 
 test('disallow line longer than 100 characters', t => {
-  const result = lint("const books = ['JavaScript: The Good Parts', 'ES6 & Beyond', 'Eloquent JavaScript A Modern Introduction to Programming']")
+  const result = lint(
+    "const books = ['JavaScript: The Good Parts', 'ES6 & Beyond', 'Eloquent JavaScript A Modern Introduction to Programming']"
+  )
   t.is(result.errorCount, 1)
   t.is(result.messages[0].ruleId, 'max-len')
 })
@@ -45,4 +47,10 @@ test('focused test are not allowed', t => {
   const result = lint('test.only(() => { /**/ })')
   t.is(result.errorCount, 1)
   t.is(result.messages[0].ruleId, 'jest/no-focused-tests')
+})
+
+test('disallows a11y violations', t => {
+  const result = lint("const image = <img src='image.png' />")
+  t.is(result.errorCount, 1)
+  t.is(result.messages[0].ruleId, 'jsx-a11y/alt-text')
 })
