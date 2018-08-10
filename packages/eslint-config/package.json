@@ -26,5 +26,9 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "eslint": "^4.19.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
