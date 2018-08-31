@@ -54,3 +54,11 @@ test('disallows a11y violations', t => {
   t.is(result.errorCount, 1)
   t.is(result.messages[0].ruleId, 'jsx-a11y/alt-text')
 })
+
+test('makes exception for jsx-a11y label-has-for rule', t => {
+  const result = lint(
+    `const template = <div><label htmlFor='checkbox'>label</label>
+  <input id='checkbox' type='checkbox' /></div>`
+  )
+  t.is(result.errorCount, 0)
+})
