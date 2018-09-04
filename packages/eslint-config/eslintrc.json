@@ -10,7 +10,17 @@
   "rules": {
     "max-len": ["error", 100],
     "prefer-const": "error",
-    "no-var": "error"
+    "no-var": "error",
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "required": {
+          "every": [
+            "id"
+          ]
+        }
+      }
+    ]
   },
   "env": {
     "mocha": true,
