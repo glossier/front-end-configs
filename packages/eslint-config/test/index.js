@@ -62,3 +62,8 @@ test('makes exception for jsx-a11y label-has-for rule', t => {
   )
   t.is(result.errorCount, 0)
 })
+
+test('ignores no autofocus jsx-a11y linter rule', t => {
+  const result = lint("const template = <input type='email' autoFocus />")
+  t.is(result.errorCount, 0)
+})
