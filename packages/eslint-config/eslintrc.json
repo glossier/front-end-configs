@@ -21,7 +21,7 @@
         }
       }
     ],
-    "jsx-a11y/no-autofocus": false
+    "jsx-a11y/no-autofocus": 0
   },
   "env": {
     "mocha": true,
