@@ -15,19 +15,16 @@
       2,
       {
         "required": {
-          "every": [
-            "id"
-          ]
+          "every": ["id"]
         }
       }
     ],
-    "jsx-a11y/no-autofocus": 0
+    "jsx-a11y/no-autofocus": 0,
+    "react-hooks/rules-of-hooks": "error"
   },
   "env": {
     "mocha": true,
     "jest": true
   },
-  "plugins": [
-    "jsx-a11y"
-  ]
+  "plugins": ["jsx-a11y", "react-hooks"]
 }
