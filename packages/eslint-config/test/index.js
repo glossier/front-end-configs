@@ -67,3 +67,12 @@ test('ignores no autofocus jsx-a11y linter rule', t => {
   const result = lint("const template = <input type='email' autoFocus />")
   t.is(result.errorCount, 0)
 })
+
+test('disallow map with key index', t => {
+  const result = lint(
+    `const foo = ['1', '2', '3']
+const template = foo.map((num, index) => { return <div key={index}>{num}</div> })`
+  )
+  t.is(result.errorCount, 1)
+  t.is(result.messages[0].ruleId, 'react/no-array-index-key')
+})
