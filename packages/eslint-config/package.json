@@ -1,6 +1,6 @@
 {
   "name": "@glossier/eslint-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "How we write JavaScript at Glossier",
   "main": "index.js",
   "scripts": {
