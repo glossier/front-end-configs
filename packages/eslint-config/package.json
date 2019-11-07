@@ -1,12 +1,12 @@
 {
   "name": "@glossier/eslint-config",
-  "version": "3.1.2",
+  "version": "3.2.0",
   "description": "How we write JavaScript at Glossier",
   "main": "index.js",
   "scripts": {
     "test": "ava test"
   },
-  "homepage": "https://github.com/glossier/front-end-configs/tree/master/packages/eslint-config#readme",
+  "homepage": "https://github.com/glossier/front-end-configs/packages/eslint-config#readme",
   "author": "Glossier",
   "license": "Apache-2.0",
   "peerDependencies": {
